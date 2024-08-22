@@ -12,6 +12,6 @@ RUN go build -o pancors ./cmd/pancors/main.go
 FROM alpine:latest
 
 COPY --from=builder /pancors/pancors /usr/bin/
-EXPOSE 8080
+EXPOSE 80
 USER nobody
 CMD ["/usr/bin/pancors"]
